@@ -1,70 +1,26 @@
 import React from 'react';
+import { Route, Routes, Switch } from "react-router-dom";
 import './App.css';
-import {TodosList} from "./components/TodosList";
-import Header from "./components/Header";
-import InputTodo from "./components/InputTodo";
-import { v4 as uuidv4 } from "uuid";
+import TodoContainer from "./components/TodoContainer";
+import NotMatch from "./Error";
+import About from "./About";
+import Navbar from "./components/Navbar";
 
-class App extends React.Component {
-    state = {
-        todos: [
-            {
-                id: uuidv4(),
-                title: "Setup development environment",
-                completed: true
-            },
-            {
-                id: uuidv4(),
-                title: "Develop website and add content",
-                completed: false
-            },
-            {
-                id: uuidv4(),
-                title: "Deploy to live server",
-                completed: false
-            }
-        ]
-    };
-    handleChange = (id) => {
-        this.setState(prevState => ({
-            todos: prevState.todos.map(todo => {
-                if (todo.id === id) {
-                    return {
-                        ...todo,
-                        completed: !todo.completed,
-                    }
-                }
-                return todo;
-            })
-        }));
-    };
-    delTodo = id => {
-        this.setState({
-            todos: [
-                ...this.state.todos.filter(todo => {
-                    return todo.id !== id;
-                })
-            ]
-        });
-    };
-    addTodoItem = title => {
-        const newTodo = {
-            id: uuidv4(),    title: title,    completed: false
-        };
-        this.setState({
-            todos: [...this.state.todos, newTodo]
-        });
-    };
 
-  render() {
-      return (
-          <div>
-              <Header/>
-              <InputTodo addTodoProps={this.addTodoItem}/>
-              <TodosList todos={this.state.todos} handleChangeProps={this.handleChange} deleteTodoProps={this.delTodo}/>
-          </div>
-      );
-  }
+const App = () => {
+    return (
+        <>
+            <Navbar/>
+            <Routes>
+                <Route exact path="/" element={<TodoContainer/>}>
+                </Route>
+                <Route path="/about/*" element={<About/>}>
+                </Route>
+                <Route path="*" element={<NotMatch/>}>
+                </Route>
+            </Routes>
+        </>
+    );
 }
 
 export default App;
