@@ -12,7 +12,7 @@ const App = () => {
         <>
             <Navbar/>
             <Routes>
-                <Route exact path="/" element={<TodoContainer/>}>
+                <Route path="/" element={<TodoContainer/>}>
                 </Route>
                 <Route path="/about/*" element={<About/>}>
                 </Route>
