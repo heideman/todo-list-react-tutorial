@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/todo-list-react-tutorial.git/static/css/main.92cddd18.css",
-    "main.js": "/todo-list-react-tutorial.git/static/js/main.8a6f3552.js",
-    "static/js/787.cd7d7d7f.chunk.js": "/todo-list-react-tutorial.git/static/js/787.cd7d7d7f.chunk.js",
-    "index.html": "/todo-list-react-tutorial.git/index.html",
-    "main.92cddd18.css.map": "/todo-list-react-tutorial.git/static/css/main.92cddd18.css.map",
-    "main.8a6f3552.js.map": "/todo-list-react-tutorial.git/static/js/main.8a6f3552.js.map",
-    "787.cd7d7d7f.chunk.js.map": "/todo-list-react-tutorial.git/static/js/787.cd7d7d7f.chunk.js.map"
+    "main.css": "/todo-list-react-tutorial/static/css/main.92cddd18.css",
+    "main.js": "/todo-list-react-tutorial/static/js/main.a8b9abe6.js",
+    "static/js/787.cd7d7d7f.chunk.js": "/todo-list-react-tutorial/static/js/787.cd7d7d7f.chunk.js",
+    "index.html": "/todo-list-react-tutorial/index.html",
+    "main.92cddd18.css.map": "/todo-list-react-tutorial/static/css/main.92cddd18.css.map",
+    "main.a8b9abe6.js.map": "/todo-list-react-tutorial/static/js/main.a8b9abe6.js.map",
+    "787.cd7d7d7f.chunk.js.map": "/todo-list-react-tutorial/static/js/787.cd7d7d7f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.92cddd18.css",
-    "static/js/main.8a6f3552.js"
+    "static/js/main.a8b9abe6.js"
   ]
 }
